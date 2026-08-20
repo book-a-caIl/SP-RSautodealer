@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SP & RS Motors | Pre-Owned Cars in Vasai-Virar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0a0c11;
+    --bg-alt: #0d1017;
+    --card: #12151c;
+    --card-hover: #161a22;
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.14);
+    --text: #f4f4f6;
+    --text-dim: #9099a8;
+    --text-dimmer: #6b7280;
+    --accent: #e8a838;
+    --accent-hover: #f3b74d;
+    --accent-dark: #1a1206;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  .container{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%;}
+  button{font-family:inherit;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(10,12,17,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    height:78px;
+  }
+  .logo{
+    font-size:19px; font-weight:800; letter-spacing:-0.02em;
+    display:flex; align-items:baseline; gap:8px;
+  }
+  .logo .amp{color:var(--accent);}
+  .logo .sub{
+    font-size:11px; font-weight:600; letter-spacing:0.16em;
+    color:var(--text-dimmer); text-transform:uppercase;
+  }
+  nav.links{
+    display:flex; gap:40px;
+    font-size:14px; font-weight:500; color:var(--text-dim);
+  }
+  nav.links a{transition:color .2s;}
+  nav.links a:hover{color:var(--text);}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:11px 20px;
+    border-radius:8px;
+    font-size:13px; font-weight:700;
+    letter-spacing:0.02em;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition:all .2s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--accent);
+    color:var(--accent-dark);
+  }
+  .btn-primary:hover{background:var(--accent-hover); transform:translateY(-1px);}
+  .btn-outline{
+    background:transparent;
+    border-color:var(--border-strong);
+    color:var(--text);
+  }
+  .btn-outline:hover{border-color:var(--accent); color:var(--accent);}
+  .btn svg{width:15px; height:15px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:640px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    border-bottom:1px solid var(--border);
+  }
+  .hero-bg{
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(90deg, rgba(8,9,13,0.97) 0%, rgba(8,9,13,0.88) 32%, rgba(8,9,13,0.55) 60%, rgba(8,9,13,0.75) 100%),
+      url('https://images.unsplash.com/photo-1617469767053-d3b523a0b982?q=80&w=1800&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center 40%;
+  }
+  .hero-content{
+    position:relative; z-index:2;
+    padding:120px 0 92px;
+    max-width:700px;
+  }
+  .eyebrow{
+    font-size:12px; font-weight:700; letter-spacing:0.16em;
+    color:var(--accent); text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:52px; line-height:1.08; font-weight:800;
+    letter-spacing:-0.02em;
+    margin-bottom:24px;
+  }
+  .hero h1 .gold{color:var(--accent);}
+  .hero p{
+    font-size:17px; color:var(--text-dim);
+    max-width:540px; margin-bottom:36px;
+    line-height:1.65;
+  }
+  .hero-ctas{display:flex; gap:14px;}
+  .hero .btn{padding:15px 26px; font-size:14px;}
+
+  /* ---------- Trust strip ---------- */
+  .trust{
+    border-bottom:1px solid var(--border);
+    background:var(--bg-alt);
+  }
+  .trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    padding:40px 0;
+  }
+  .trust-item{
+    padding:0 32px;
+    border-left:1px solid var(--border);
+  }
+  .trust-item:first-child{border-left:none; padding-left:0;}
+  .trust-value{
+    font-size:24px; font-weight:800; color:var(--accent);
+    margin-bottom:4px; letter-spacing:-0.01em;
+  }
+  .trust-label{font-size:14px; color:var(--text-dim);}
+
+  /* ---------- Section shared ---------- */
+  section.block{padding:96px 0;}
+  .section-head{max-width:620px; margin-bottom:48px;}
+  .section-head h2{
+    font-size:36px; font-weight:800; letter-spacing:-0.02em;
+    margin:14px 0 16px;
+  }
+  .section-head p{color:var(--text-dim); font-size:15.5px; line-height:1.7;}
+  .section-head-row{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    margin-bottom:48px; gap:24px;
+  }
+  .stars{color:var(--accent); font-size:20px; letter-spacing:3px;}
+
+  /* ---------- Stock cards ---------- */
+  .stock-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:32px;
+  }
+  .stock-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    overflow:hidden;
+    transition:transform .25s ease, border-color .25s ease;
+  }
+  .stock-card:hover{transform:translateY(-4px); border-color:var(--border-strong);}
+  .stock-img{
+    width:100%; height:170px; object-fit:cover;
+    background:#e9e9ea;
+  }
+  .stock-body{padding:18px 20px 22px;}
+  .tag{
+    display:inline-block;
+    font-size:10.5px; font-weight:700; letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+    border:1px solid rgba(232,168,56,0.35);
+    background:rgba(232,168,56,0.08);
+    padding:4px 10px;
+    border-radius:20px;
+    margin-bottom:12px;
+  }
+  .stock-body h3{font-size:18px; font-weight:700; margin-bottom:6px;}
+  .stock-body .spec{font-size:13.5px; color:var(--text-dim);}
+
+  /* ---------- Feature grid ---------- */
+  .feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+  .feature-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:28px 26px;
+    transition:border-color .25s ease, transform .25s ease;
+  }
+  .feature-card:hover{border-color:var(--border-strong); transform:translateY(-2px);}
+  .feature-icon{
+    width:38px; height:38px;
+    color:var(--accent);
+    margin-bottom:20px;
+  }
+  .feature-icon svg{width:26px; height:26px;}
+  .feature-card h3{font-size:17px; font-weight:700; margin-bottom:10px;}
+  .feature-card p{font-size:14px; color:var(--text-dim); line-height:1.65;}
+
+  /* ---------- Reviews ---------- */
+  .review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+  .review-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:28px 26px;
+  }
+  .quote-mark{font-size:26px; font-weight:800; color:var(--accent); margin-bottom:14px; display:block;}
+  .review-card p.text{font-size:14.5px; color:#c7cbd3; line-height:1.7; margin-bottom:20px;}
+  .review-card .name{font-size:14.5px; font-weight:700;}
+
+  /* ---------- Location ---------- */
+  .location-wrap{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .info-row{
+    display:flex; gap:14px;
+    margin-bottom:18px;
+    color:var(--text-dim);
+    font-size:14.5px;
+    line-height:1.6;
+  }
+  .info-row svg{width:18px; height:18px; flex-shrink:0; color:var(--accent); margin-top:2px;}
+  .location-ctas{display:flex; gap:14px; margin-top:30px;}
+  .map-frame{
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    height:420px;
+  }
+  .map-frame iframe{width:100%; height:100%; border:0; filter:grayscale(0.15) brightness(0.95);}
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--border);
+    padding:32px 0;
+  }
+  .footer-inner{
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap:12px;
+  }
+  .footer-left .fname{font-weight:700; font-size:14px;}
+  .footer-left .fsub{font-size:12.5px; color:var(--text-dimmer); margin-top:2px;}
+  .footer-right{font-size:12.5px; color:var(--text-dimmer);}
+
+  /* ---------- Reveal animation ---------- */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- Mobile nav ---------- */
+  .burger{display:none; background:none; border:none; color:var(--text); cursor:pointer;}
+  .burger svg{width:24px; height:24px;}
+
+  @media (max-width: 980px){
+    .stock-grid{grid-template-columns:repeat(2,1fr);}
+    .feature-grid{grid-template-columns:repeat(2,1fr);}
+    .review-grid{grid-template-columns:1fr;}
+    .location-wrap{grid-template-columns:1fr;}
+    .trust-grid{grid-template-columns:repeat(2,1fr); row-gap:28px;}
+    .trust-item:nth-child(3){border-left:none; padding-left:0;}
+  }
+  @media (max-width: 720px){
+    nav.links{display:none;}
+    .burger{display:block;}
+    .hero h1{font-size:34px;}
+    .hero-content{padding:80px 0 64px;}
+    .stock-grid{grid-template-columns:1fr;}
+    .feature-grid{grid-template-columns:1fr;}
+    .container{padding:0 20px;}
+    .hero-ctas{flex-direction:column;}
+    .hero-ctas .btn{width:100%; justify-content:center;}
+    .section-head-row{flex-direction:column; align-items:flex-start;}
+    .footer-inner{flex-direction:column; align-items:flex-start;}
+  }
+
+  /* ---------- Google Business Profile block (added) ---------- */
+  .gbp-top{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    gap:32px; margin-bottom:48px; flex-wrap:wrap;
+  }
+  .gbp-rating-row{display:flex; align-items:center; gap:10px; margin:10px 0 18px;}
+  .gbp-rating-row .stars{font-size:16px; letter-spacing:2px;}
+  .gbp-rating-row .count{color:var(--text-dim); font-size:14px;}
+  .gbp-meta{color:var(--text-dim); font-size:14px; line-height:1.9;}
+  .gbp-meta strong{color:var(--text); font-weight:600;}
+  .pluscode{
+    display:inline-block; margin-top:10px;
+    font-size:12.5px; color:var(--text-dimmer);
+    border:1px solid var(--border); border-radius:20px;
+    padding:5px 12px; letter-spacing:0.02em;
+  }
+  .owner-note{
+    background:var(--card); border:1px solid var(--border); border-radius:14px;
+    padding:26px 28px; max-width:520px;
+  }
+  .owner-note .label{font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:10px;}
+  .owner-note p{font-size:14.5px; color:#c7cbd3; line-height:1.75;}
+  .owner-note .date{margin-top:14px; font-size:12.5px; color:var(--text-dimmer);}
+
+  .photo-strip{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-bottom:56px;
+  }
+  .photo-strip img{
+    width:100%; height:130px; object-fit:cover; border-radius:10px;
+    border:1px solid var(--border);
+  }
+
+  .gbp-columns{display:grid; grid-template-columns:0.85fr 1.15fr; gap:48px; align-items:start;}
+  .rating-bars{display:flex; flex-direction:column; gap:8px; margin-top:18px;}
+  .rating-bars .row{display:flex; align-items:center; gap:10px; font-size:12.5px; color:var(--text-dim);}
+  .rating-bars .row span:first-child{width:10px;}
+  .bar-track{flex:1; height:6px; border-radius:4px; background:rgba(255,255,255,0.06); overflow:hidden;}
+  .bar-fill{height:100%; background:var(--accent); border-radius:4px;}
+  .snippets{margin-top:22px; display:flex; flex-direction:column; gap:12px;}
+  .snippet{
+    font-size:13.5px; color:var(--text-dim); line-height:1.6;
+    padding-left:14px; border-left:2px solid rgba(232,168,56,0.4);
+  }
+
+  .owner-reply{
+    margin-top:14px; padding:14px 16px;
+    background:rgba(255,255,255,0.03);
+    border:1px solid var(--border);
+    border-radius:10px;
+  }
+  .owner-reply .who{font-size:12px; font-weight:700; color:var(--text); margin-bottom:4px;}
+  .owner-reply .who span{font-weight:500; color:var(--text-dimmer); text-transform:none;}
+  .owner-reply p{font-size:13px; color:var(--text-dim); line-height:1.6;}
+
+  .gbp-reviewer-row{display:flex; align-items:center; gap:10px; margin-bottom:10px;}
+  .avatar{
+    width:34px; height:34px; border-radius:50%;
+    background:linear-gradient(135deg, var(--accent), #7a5518);
+    display:flex; align-items:center; justify-content:center;
+    font-size:13px; font-weight:700; color:var(--accent-dark);
+    flex-shrink:0;
+  }
+  .gbp-reviewer-meta{font-size:12px; color:var(--text-dimmer);}
+  .more-reviews-note{
+    text-align:center; margin-top:28px; font-size:13.5px; color:var(--text-dim);
+  }
+
+  @media (max-width: 980px){
+    .gbp-columns{grid-template-columns:1fr;}
+    .photo-strip{grid-template-columns:repeat(3,1fr);}
+  }
+  @media (max-width: 720px){
+    .photo-strip{grid-template-columns:repeat(2,1fr);}
+    .gbp-top{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-inner">
+    <div class="logo"><span>SP <span class="amp">&amp;</span> RS</span><span class="sub">Motors</span></div>
+    <nav class="links">
+      <a href="#stock">Stock</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a href="tel:09892410869" class="btn btn-primary">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106a1.125 1.125 0 00-1.173.417l-.97 1.293c-.282.376-.769.53-1.21.36a12.035 12.035 0 01-7.143-7.143c-.17-.441-.016-.928.36-1.21l1.293-.97a1.125 1.125 0 00.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+      CALL NOW
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <div class="eyebrow">Pre-owned cars in Vasai</div>
+    <h1>Pre-owned cars in Vasai-Virar, <span class="gold">bought the right way.</span></h1>
+    <p>Buying a car becomes easier when you have the right guidance. Get expert assistance in choosing the right vehicle for your needs — plus finance, exchange and complete RTO paperwork under one roof.</p>
+    <div class="hero-ctas">
+      <a href="tel:09892410869" class="btn btn-primary">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106a1.125 1.125 0 00-1.173.417l-.97 1.293c-.282.376-.769.53-1.21.36a12.035 12.035 0 01-7.143-7.143c-.17-.441-.016-.928.36-1.21l1.293-.97a1.125 1.125 0 00.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+        098924 10869
+      </a>
+      <a href="#visit" class="btn btn-outline">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+        GET DIRECTIONS
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-value">5.0★</div>
+        <div class="trust-label">Google rating</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-value">Open daily</div>
+        <div class="trust-label">Till 8:30 pm</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-value">T-permit</div>
+        <div class="trust-label">Commercial stock</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-value">Finance</div>
+        <div class="trust-label">Quick approvals</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="stock">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Current stock</div>
+      <h2>On the showroom floor</h2>
+      <p>Our inventory changes weekly. Call us with your budget and usage, and we will shortlist what fits — including vehicles we can source on request.</p>
+    </div>
+
+    <div class="stock-grid reveal">
+      <div class="stock-card">
+        <img class="stock-img" src="https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=600&auto=format&fit=crop" alt="Premium Sedan">
+        <div class="stock-body">
+          <span class="tag">Family favourite</span>
+          <h3>Premium Sedan</h3>
+          <p class="spec">Petrol · 1st owner · 42,000 km</p>
+        </div>
+      </div>
+      <div class="stock-card">
+        <img class="stock-img" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=600&auto=format&fit=crop" alt="Compact SUV">
+        <div class="stock-body">
+          <span class="tag">High demand</span>
+          <h3>Compact SUV</h3>
+          <p class="spec">Diesel · 2nd owner · 58,000 km</p>
+        </div>
+      </div>
+      <div class="stock-card">
+        <img class="stock-img" src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=600&auto=format&fit=crop" alt="City Hatchback">
+        <div class="stock-body">
+          <span class="tag">Budget pick</span>
+          <h3>City Hatchback</h3>
+          <p class="spec">Petrol · 1st owner · 31,000 km</p>
+        </div>
+      </div>
+      <div class="stock-card">
+        <img class="stock-img" src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?q=80&w=600&auto=format&fit=crop" alt="T-Permit Commercial">
+        <div class="stock-body">
+          <span class="tag">Commercial</span>
+          <h3>T-Permit Commercial</h3>
+          <p class="spec">Diesel · Fleet ready · Papers clear</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="tel:09892410869" class="btn btn-outline reveal">ASK ABOUT AVAILABILITY</a>
+  </div>
+</section>
+
+<section class="block" id="services" style="background:var(--bg-alt); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">What we do</div>
+      <h2>Everything a buyer needs</h2>
+      <p>From choosing the right pre-owned car to financing, documentation and exchange — we help buyers through every step, including commercial and T-permit vehicles.</p>
+    </div>
+
+    <div class="feature-grid reveal">
+      <div class="feature-card">
+        <div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 0h-12" /></svg></div>
+        <h3>Quality pre-owned cars</h3>
+        <p>Hand-picked hatchbacks, sedans and SUVs, each inspected and detailed before it reaches the showroom floor.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m6 15l3-3m0 0l-3-3m3 3h-7.5" /></svg></div>
+        <h3>T-permit &amp; commercial</h3>
+        <p>Taxi and commercial vehicles sourced in single units or bulk, with registration and compliance handled end to end.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg></div>
+        <h3>Finance assistance</h3>
+        <p>Loan tie-ups with quick approvals, transparent EMI options and no hidden charges at any stage.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg></div>
+        <h3>Exchange &amp; buy-back</h3>
+        <p>Fair valuation for your current car and a straightforward exchange against anything in our stock.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg></div>
+        <h3>Clear documentation</h3>
+        <p>RC transfer, NOC, insurance and RTO paperwork completed correctly the first time.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg></div>
+        <h3>Honest guidance</h3>
+        <p>Expert help in choosing the right vehicle for your budget and usage, without any pressure to buy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="reviews">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div class="section-head" style="margin-bottom:0;">
+        <div class="eyebrow">Reviews</div>
+        <h2 style="margin-bottom:0;">Rated 5.0 by our customers</h2>
+      </div>
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <div class="review-grid reveal">
+      <div class="review-card">
+        <span class="quote-mark">&rdquo;</span>
+        <p class="text">Got a fantastic deal on our vehicle. SP &amp; RS Motors is a highly professional car dealer in Vasai-Virar. The entire process was clear and upfront.</p>
+        <div class="name">Pranjal Sakpal</div>
+      </div>
+      <div class="review-card">
+        <span class="quote-mark">&rdquo;</span>
+        <p class="text">Clean, well-maintained showroom with a great inventory on display. The hospitality of the staff makes you feel valued as a customer.</p>
+        <div class="name">Ankita</div>
+      </div>
+      <div class="review-card">
+        <span class="quote-mark">&rdquo;</span>
+        <p class="text">Sourced multiple commercial vehicles for our logistics business. Excellent handling of bulk registrations and compliance paperwork.</p>
+        <div class="name">Alok Yadav</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="google-profile" style="border-top:1px solid var(--border);">
+  <div class="container">
+
+    <div class="gbp-top reveal">
+      <div>
+        <div class="eyebrow">As seen on Google</div>
+        <h2 style="font-size:32px; font-weight:800; letter-spacing:-0.02em; margin:14px 0 0;">SP &amp; RS Motors</h2>
+        <div style="font-size:14px; color:var(--text-dimmer); margin-top:4px;">एसपी &amp; आरएस मोटर्स · Car dealer</div>
+        <div class="gbp-rating-row">
+          <span class="stars">★★★★★</span>
+          <span class="count">5.0 (5 reviews)</span>
+        </div>
+        <div class="gbp-meta">
+          <strong>Shop 7A &amp; 7B, Mangal Murti Co-op. Hsg. Soc.,</strong><br>
+          Dutt Mandir Road, near Banjara Hotel, Vasai-Virar, Maharashtra 401303<br>
+          Open · Closes 8:30 pm &nbsp;·&nbsp; 098924 10869
+        </div>
+        <div class="pluscode">Plus code: FR33+7H Vasai-Virar, Maharashtra</div>
+      </div>
+
+      <div class="owner-note">
+        <div class="label">From the owner</div>
+        <p>Buying a car becomes easier when you have the right guidance. At SP &amp; RS Motors, get expert assistance in choosing the right vehicle for your needs. Visit your trusted car dealer in Vasai-Virar for quality cars and a smooth buying experience.</p>
+        <div class="date">Aug 12, 2026</div>
+      </div>
+    </div>
+
+    <div class="photo-strip reveal">
+      <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=400&auto=format&fit=crop" alt="Showroom car">
+      <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=400&auto=format&fit=crop" alt="SUV in stock">
+      <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=400&auto=format&fit=crop" alt="Hatchback in stock">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=400&auto=format&fit=crop" alt="Showroom interior">
+      <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=400&auto=format&fit=crop" alt="Car exterior">
+    </div>
+
+    <div class="gbp-columns reveal">
+      <div>
+        <h3 style="font-size:18px; font-weight:700;">Review summary</h3>
+        <div class="rating-bars">
+          <div class="row"><span>5</span><div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div><span>5</span></div>
+          <div class="row"><span>4</span><div class="bar-track"><div class="bar-fill" style="width:0%;"></div></div><span>0</span></div>
+          <div class="row"><span>3</span><div class="bar-track"><div class="bar-fill" style="width:0%;"></div></div><span>0</span></div>
+          <div class="row"><span>2</span><div class="bar-track"><div class="bar-fill" style="width:0%;"></div></div><span>0</span></div>
+          <div class="row"><span>1</span><div class="bar-track"><div class="bar-fill" style="width:0%;"></div></div><span>0</span></div>
+        </div>
+        <div class="snippets">
+          <div class="snippet">&ldquo;Excellent handling of bulk registrations and compliance paperwork.&rdquo;</div>
+          <div class="snippet">&ldquo;If you need a T-permit car, SP &amp; RS Motors is a great choice.&rdquo;</div>
+          <div class="snippet">&ldquo;Clean, well-maintained showroom with a great inventory on display.&rdquo;</div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-size:18px; font-weight:700; margin-bottom:16px;">Owner responses</h3>
+
+        <div class="owner-reply" style="margin-top:0;">
+          <div class="who">Reply to Pranjal Sakpal <span>· 4 weeks ago</span></div>
+          <p>Thank you, Ma'am! We appreciate your kind words and are delighted to hear you had a great experience with SP &amp; RS Motors.</p>
+        </div>
+        <div class="owner-reply">
+          <div class="who">Reply to Ankita <span>· 4 weeks ago</span></div>
+          <p>Thank you, Ma'am! We're thrilled you enjoyed our showroom and hospitality at SP &amp; RS Motors in Vasai-Virar.</p>
+        </div>
+        <div class="owner-reply">
+          <div class="who">Reply to Alok Yadav <span>· 4 weeks ago</span></div>
+          <p>Thank you, Sir! We're proud to support your logistics business with seamless commercial vehicle sales and hassle-free registration in Vasai-Virar.</p>
+        </div>
+
+        <div class="more-reviews-note">More reviews (2) — call the showroom or view on Google Maps for the full list.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="block" id="visit" style="background:var(--bg-alt); border-top:1px solid var(--border);">
+  <div class="container">
+    <div class="location-wrap reveal">
+      <div>
+        <div class="eyebrow">Visit us</div>
+        <h2 style="font-size:32px; font-weight:800; letter-spacing:-0.02em; margin:14px 0 26px;">Datt Mandir Road, Vasai-Virar</h2>
+
+        <div class="info-row">
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+          <span>Shop 7A &amp; 7B, Mangal Murti Co-op. Hsg. Soc., Datt Mandir Road, near Banjara Hotel, Vasai-Virar, Maharashtra 401303</span>
+        </div>
+        <div class="info-row">
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <span>Open today · closes 8:30 pm</span>
+        </div>
+        <div class="info-row">
+          <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106a1.125 1.125 0 00-1.173.417l-.97 1.293c-.282.376-.769.53-1.21.36a12.035 12.035 0 01-7.143-7.143c-.17-.441-.016-.928.36-1.21l1.293-.97a1.125 1.125 0 00.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+          <span>098924 10869</span>
+        </div>
+
+        <div class="location-ctas">
+          <a href="tel:09892410869" class="btn btn-primary">CALL THE SHOWROOM</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Datt+Mandir+Road+Vasai-Virar" target="_blank" class="btn btn-outline">OPEN IN MAPS</a>
+        </div>
+      </div>
+
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=Datt+Mandir+Road,+Vasai-Virar,+Maharashtra+401303&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <div class="fname">SP &amp; RS Motors · एसपी &amp; आरएस मोटर्स · Pre-owned car dealer, Vasai-Virar</div>
+    </div>
+    <div class="footer-right">© 2026 SP &amp; RS Motors</div>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.12});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
